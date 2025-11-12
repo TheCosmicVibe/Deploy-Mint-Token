@@ -8,10 +8,10 @@ async function main() {
   const MyToken = await hre.ethers.getContractFactory("Tether");
   // name, symbol, initial supply (use parseUnits for decimals)
   const initialSupply = hre.ethers.utils.parseUnits("1000000", 18); // 1000 tokens
-  const token = await MyToken.deploy("Tether", "USDT", initialSupply);
+  const token = await Tether.deploy("Tether", "USDT", initialSupply);
   await token.deployed();
 
-  console.log("MyToken deployed to:", token.address);
+  console.log("Tether deployed to:", token.address);
   console.log("Verify with: npx hardhat verify --network <network> <address> \"MyToken\" \"MTK\" \"1000000000000000000000\"");
 }
 
