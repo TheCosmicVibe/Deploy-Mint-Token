@@ -7,7 +7,13 @@ module.exports = {
   solidity: "0.8.20",
   networks: {
     hardhat: {},
+
     sepolia: {
+      url: RPC_URL || "",
+      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : []
+    },
+
+    mainnet: {
       url: RPC_URL || "",
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : []
     }
