@@ -5,7 +5,7 @@ async function main() {
   const [deployer] = await hre.ethers.getSigners();
   console.log("Deploying with:", deployer.address);
 
-  const MyToken = await hre.ethers.getContractFactory("MyToken");
+  const MyToken = await hre.ethers.getContractFactory("Tether");
   // name, symbol, initial supply (use parseUnits for decimals)
   const initialSupply = hre.ethers.utils.parseUnits("1000000", 18); // 1000 tokens
   const token = await MyToken.deploy("Tether", "USDT", initialSupply);
