@@ -21,7 +21,7 @@ async function main() {
   const contract = new ethers.Contract(CONTRACT_ADDRESS, artifact.abi, signer);
 
   const to = signer.address;
-  const amount = ethers.utils.parseUnits("100", 18); // mint 100 tokens
+  const amount = ethers.utils.parseUnits("1000000", 18); // mint 100 tokens
 
   const tx = await contract.mint(to, amount);
   console.log("Mint tx hash:", tx.hash);
